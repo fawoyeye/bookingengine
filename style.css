@@ -1,0 +1,66 @@
+*{max-width:100%;
+box-sizing:border-box;height: auto;}
+
+
+body{font-family:'noto sans', helvetica}
+
+
+main{display:flex;justify-content:center;
+align-items:center;flex-direction:column;}
+
+
+.container{width: 90vw;height:570px;background: purple;border-radius: 5px;margin:35px auto;transition:0.5s}
+.button-top{background:gold;color: purple;flex-direction:row;border-radius:5px;height: 2rem;justify-content:space-between;width: 85vw;flex-flow:wrap;display:flex;margin: 0px auto 0px auto;}
+
+.button-top button{border-radius: 5px;background: gold;border:solid gold 5px;height:2rem;transition:0.5s;}
+
+.button-top button:hover{background: white;}
+
+.inline{flex-direction:row;display:flex;width:87vw;justify-content:space-between}
+
+
+input{height: 3rem;width: 85vw;margin: 0px 5px;background: white;border:none;border-radius: 5px;}
+
+p{font-size:1rem;margin: 10px 5px;}
+
+select{margin: 0px 5px;background: white;height: 3rem;border:none;border-radius: 5px;}
+.date{width: 40vw;}
+.passangers{flex-direction:row;display:flex;padding:inherit 10px;justify-content:space-between;width: 87vw;align-items:center;flex-flow:no-wrap;}
+.passangers select{width: 25vw;margin:5px}
+.child{float:right;top: -10px;}
+.hid{display:block;}
+p{color: white;}
+.trav select{width: 85vw;}
+.inline input{width: 35vw;}
+
+.check{background: gold;width:85vw;height:2rem;border:none;border-radius: 5px;margin:15px 5px;color: black;font-size:1rem;font-weight:500;text-transform:uppercase}
+i{color:purple;width:25px}
+.choose{display:flex;flex-direction:row;justify-content:space-between;width:75vw;margin:10px auto;background: gold;height: 2rem;align-items:center;width: 90vw;position:fixed;transition:0.3s}
+.choose div{transition:1s}
+.choose div:hover{background: white;}
+
+
+
+
+
+/*hotel hotel hotel hotel hotel*/
+.hotel{width: 90vw;height:370px;background: purple;border-radius: 5px;transition:5s;margin: 30px auto;transition:2s}
+.in{display:flex;flex-direction:row;}
+.in input{width:40vw;}
+.hotel select{width: 40vw;}
+.advanced{display:none;}
+.opt{width:50vw;}
+.opt:hover{background: gold;border-radius: 2px;}
+.hotel button{background: gold;width:85vw;height:2rem;border:none;border-radius: 5px;margin:15px 5px;color: black;font-size:1rem;font-weight:500;text-transform:uppercase}
+
+/*car car car car car car car car*/
+.car{width: 90vw;height:400px;background: purple;border-radius: 5px;transition:,5s;margin: 30px auto;transition:3s}
+.pick input{width: 40vw;}
+.off{display:flex;flex-direction:row;justify-content:space-between;align-items:flex-end;}
+.car button{background: gold;width:85vw;height:2rem;border:none;border-radius: 5px;margin:15px 5px;color: black;font-size:1rem;font-weight:500;text-transform:uppercase}
+
+/*multiple*/
+.add-form-button{background: gold;width:85vw;height:2rem;border:none;border-radius: 5px;margin:15px 5px;color: black;font-size:1rem;font-weight:500;text-transform:uppercase;display:none;}
+h1{text-align:center;background: gold;width:85vw;height:2rem;border:none;border-radius: 5px;margin:15px 5px;color: black;font-size:1rem;font-weight:500;text-transform:uppercase;display:flex;align-items:center;}
+.multiple{display:none;}
+.form-container{display:none;}

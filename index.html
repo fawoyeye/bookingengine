@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				
+				<!-- set such that onload only flight booking shows -->
+				<!-- do car rentals -->
+				
+			<!-- fix all the problem on chrome -->	
+				
+				<link rel="stylesheet" href="styles.css">
+				<meta name="viewport" content="width=device-width initial-scale=1"/>
+			<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
+	<meta name="theme-color"content="gold">
+				<title>flight</title>
+				<link rel="stylesheet" href="style.css">
+				<script src="https://kit.fontawesome.com/b2199eef70.js" crossorigin="anonymous"></script>
+				<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/b2199eef70.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+				<main>
+								<!-- section for flight booking form -->
+								
+								<section>
+												<!-- where you choose between flight, hotel and cars -->
+												
+								<article class="choose">
+										<div onclick="document.querySelector('.car').style.display='none';document.querySelector('.container').style.display='block';document.querySelector('.hotel').style.display='none';">	<i class="fa-solid fa-plane"></i>Flight</div>
+										<div onclick="document.querySelector('.container').style.display='none';document.querySelector('.hotel').style.display='none';document.querySelector('.car').style.display='block';">	<i class="fa-solid fa-car"></i>	Car rentals</div>
+										<div onclick="document.querySelector('.container').style.display='none';document.querySelector('.car').style.display='none';document.querySelector('.hotel').style.display='block';">	<i class="fa-solid fa-building"></i>
+								Hotel</div>
+								
+								</article><br>
+								
+								
+								
+								
+								<!-- container section -->
+								<section class="container">
+												
+												<!-- article for the top button for switching between round trip, one way and multiple destinations -->
+												
+												<article class="button-top">
+							<button onclick="document.querySelector('.container').style.height='550px';document.querySelector('.hid').style.display='block';document.querySelector('.hotel').style.display='none';document.querySelector('.car').style.display='none';document.querySelector('.add-form-button').style.display='none';" class="round">Round Trip</button>
+										<button onclick=" document.querySelector('.hotel').style.display='none';document.querySelector('.container').style.height='450px';document.querySelector('.hid').style.display='none';document.querySelector('.car').style.display='none';document.querySelector('.add-form-button').style.display='none';" id="one">One way</button>
+										<button onclick="document.querySelector('.add-form-button').style.display='block';document.querySelector('.multiple').style.display='block';document.querySelector('.container').style.height='630px';" class="multi">Multi-city Flights</button>
+									</article>
+												<!-- End of the article for switching -->
+												
+												
+									<!-- start of the form -->		
+												<form id="form-template">
+																<label>
+											<p>Flying from</p>
+									<input type="search" placeholder="City or Airport" required></label>
+											<div class="hid">			
+											<label>
+											<p>Flying To</p>
+									<input type="search" placeholder="City or Airport" required></label>
+									</div>
+									
+									
+									<!-- The inline class
+									Set width to 45 vw for each -->
+									<div class="inline">
+													<label class="depart">
+											<p>Departure Date</p>
+									<input  class="date"type="date" required> </label>
+									
+														<label class="return">
+											<p>Return Date</p>
+									<input class="date"type="date" required></label>		
+										</div>	
+												<!-- End -->
+												
+												
+												
+												<article class="passangers">
+									<!-- Drop down 
+													Use a non generic dropdown -->				
+							<label>	
+										<p>Adult(12+)</p>
+											<select required>
+													<option>1</option>	
+													<option>2</option>
+												<option>3</option>	
+											<option>4</option>		
+											<option>5</option>		
+												<option>6</option>	
+													<option>7</option>
+													<option>8</option>
+													<option>9</option>
+											</select>
+													</label>
+													
+													
+													<label class=".child">
+																	<p>Child(2-11)</p>
+											<select required>
+													<option>1</option>	
+													<option>2</option>
+												<option>3</option>	
+											<option>4</option>		
+											<option>5</option>		
+												<option>6</option>	
+													<option>7</option>
+													<option>8</option>
+													<option>9</option>
+											</select>
+													</label>
+													
+									<label>
+													<p>Infant(0-2)</p>
+													<select required>
+													<option>1</option>	
+													<option>2</option>
+												<option>3</option>	
+											<option>4</option>		
+											<option>5</option>		
+												<option>6</option>	
+													<option>7</option>
+													<option>8</option>
+													<option>9</option>
+											</select>
+									</label>
+									
+									</article>
+									<label class="trav">
+													<p>Travel Class</p>
+													<select required>
+																	<option>Economy</option>
+												<option>First Class</option>
+												<option>Business</option>
+												<option>Premium First Class</option>
+													</select>
+									</label>
+									<button class="check"type="submit">Check for Availability</button>
+												</form>
+												
+												<!-- multiple -->
+							<section class="multiple">
+			<!-- when you click multiple flights it shows the flight container with add flight -->
+			
+			
+					<h1 class="add-form-button" onclick="document.querySelector('.container').style.height='1200px';document.querySelector('.multiple').style.display='block';document.querySelector('.add-form-button').innerHTML='Remove flight';document.querySelector('.form-container').style.display='block';">Add Flight</h1>
+					
+				<!-- when you click on add flight button it shows a new form -->
+												<form class="form-container">
+																<label>
+											<p>Flying from</p>
+									<input type="search" placeholder="City or Airport"</label>
+											<div class="hid">			
+											<label>
+											<p>Flying To</p>
+									<input type="search" placeholder="City or Airport" required></label>
+									</div>
+									
+									
+									<!-- The inline class
+									Set width to 45 vw for each -->
+									<div class="inline">
+													<label class="depart">
+											<p>Departure Date</p>
+									<input  class="date"type="date" required> </label>
+									
+														<label class="return">
+											<p>Return Date</p>
+									<input class="date"type="date" required></label>		
+										</div>	
+												<!-- End -->
+												
+												
+												
+												<article class="passangers">
+									<!-- Drop down 
+													Use a non generic dropdown -->				
+							<label>	
+										<p>Adult(12+)</p>
+											<select required>
+													<option>1</option>	
+													<option>2</option>
+												<option>3</option>	
+											<option>4</option>		
+											<option>5</option>		
+												<option>6</option>	
+													<option>7</option>
+													<option>8</option>
+													<option>9</option>
+											</select>
+													</label>
+													
+													
+													<label class=".child">
+																	<p>Child(2-11)</p>
+											<select required>
+													<option>1</option>	
+													<option>2</option>
+												<option>3</option>	
+											<option>4</option>		
+											<option>5</option>		
+												<option>6</option>	
+													<option>7</option>
+													<option>8</option>
+													<option>9</option>
+											</select>
+													</label>
+													
+									<label>
+													<p>Infant(0-2)</p>
+													<select required>
+													<option>1</option>	
+													<option>2</option>
+												<option>3</option>	
+											<option>4</option>		
+											<option>5</option>		
+												<option>6</option>	
+													<option>7</option>
+													<option>8</option>
+													<option>9</option>
+											</select>
+									</label>
+									
+									</article>
+									<label class="trav">
+													<p>Travel Class</p>
+													<select>
+																	<option>Economy</option>
+												<option>First Class</option>
+												<option>Business</option>
+									<option>Premium First Class</option>
+													</select>
+									</label>
+									</form>
+								</section>
+								<!-- multiple  form flights end -->
+												</section>
+								
+								
+								
+								<!-- Hotel Booking!! -->
+								<section class="hotel">
+								<form>
+							<!-- check in and check out class in -->
+										
+														<label>
+																<p>Going to</p>
+																<input type="search" placeholder="Destination, airport, train station, landmark" required>
+											<article class="in">		
+																</label>
+												<label>
+																<p>Check in</p>
+																<input type="date" required>
+												</label>
+											<label>
+																<p>Check out</p>
+																<input type="date" required>
+												</label>
+												</article>
+													<article class="passangers">
+									<!-- Drop down 
+													Use a non generic dropdown -->				
+							<label>	
+										<p>Adult (18+)</p>
+													<select required>
+													<option>1</option>	
+													<option>2</option>
+												<option>3</option>	
+											<option>4</option>		
+											<option>5</option>		
+												<option>6</option>	
+													<option>7</option>
+													<option>8</option>
+													<option>9</option>
+											</select>
+													</label>
+													
+													<label >
+																	<p>Children(0-17)</p>
+											<select required>
+													<option>1</option>	
+													<option>2</option>
+												<option>3</option>	
+											<option>4</option>		
+											<option>5</option>		
+												<option>6</option>	
+													<option>7</option>
+													<option>8</option>
+													<option>9</option>
+											</select>
+													</label></article>
+								
+						<button type="submit">Search</button>
+								</form>
+								</section>
+								
+								
+								
+								<!-- car rentals -->
+								<section class="car">
+												<form>
+																<label>
+																				<p>Pick up location</p>
+																				<input type="text" required>
+																</label>
+																
+												<label>
+																				<p>Drop off location</p>
+																				<input placeholder="Same as pick up location" type="text" required>
+																</label>
+																<article class="pick">
+													
+													<div class="off">	<label>
+																		<p>Pick up Date</p>
+																		<input type="date" required>
+																		</label>
+																		
+																		<label>
+																						<p>Time</p>
+																		<input type="time"required>
+														</label>		
+				</div>
+				<div class="off">
+				<label>
+																		<p>Drop off Date</p>
+																		<input type="date" required>
+																		</label>
+																		<label>
+																						<p>Time</p>
+																		<input type="time" required>
+														</label>		
+														</div>
+														<button type="submit">Search</button>
+														</article>
+				</form>
+								</section>
+								
+								
+								
+								
+				</main>
+				<script src="index.js">	</script>
+				
+</body>
+</html>
